@@ -53,7 +53,8 @@ if submit and input:
    # Getting the responses in chunk instead of waiting for whole response from Gemini  
     for chunk in response:
         st.write(chunk.text)
-        st.session_state['chat_history'].append(("Bot", chunk.text))
+    
+    st.session_state['chat_history'].append(("Bot", response.text))
    
 
 # # st.subheader("The Chat History is")
